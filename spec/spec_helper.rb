@@ -1,12 +1,6 @@
-require 'test/unit'
+Bundler.require(:default, :development)
 
-begin
-  require 'spec'
-rescue LoadError
-  require 'rubygems'
-  gem 'rspec'
-  require 'spec'
-end
+require 'test/unit'
 
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'bandsintown'

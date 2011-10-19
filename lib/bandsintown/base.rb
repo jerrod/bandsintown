@@ -36,7 +36,7 @@ module Bandsintown
       self.instance_variables.each do |ivar|
         value = self.instance_variable_get(ivar)
         next if value.blank?
-        hash[:"#{ivar.gsub('@', '')}"] = value
+        hash[:"#{ivar.to_s.gsub('@', '')}"] = value
       end
       hash
     end
